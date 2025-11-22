@@ -1,3 +1,28 @@
+
+# 训练ControlNet模型
+预训练模型文件夹为sd1.5，需提前下载Huggingface库中的预训练权重；
+训练数据集文件夹为dataset，可用fill50k进行测试；
+训练完毕后可使用cnet_test.py进行推理。
+# 训练参数示例：
+accelerate launch train_controlnet.py \
+ --pretrained_model_name_or_path="./sd1.5" \
+ --output_dir="./output/1120" \
+ --resume_from_checkpoint="latest" \
+ --dataset_name=./dataset/fill50k.py \
+ --resolution=512 \
+ --learning_rate=1e-5 \
+ --validation_image "./conditioning_image_1.png" "./conditioning_image_2.png" \
+ --validation_prompt "red circle with blue background" "cyan circle with brown floral background" \
+ --train_batch_size=1 \
+ --num_train_epochs=5 \
+ --checkpointing_steps=10000 \
+ --gradient_accumulation_steps=4 \
+ --gradient_checkpointing \
+ --use_8bit_adam \
+ --cache_dir="./dataset/cache" \
+ --validation_steps=1000
+***
+# 下面是DIffusers官方md：
 # ControlNet training example
 
 [Adding Conditional Control to Text-to-Image Diffusion Models](https://huggingface.co/papers/2302.05543) by Lvmin Zhang and Maneesh Agrawala.
