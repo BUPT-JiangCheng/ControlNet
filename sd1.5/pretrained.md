@@ -1,0 +1,1 @@
+默认使用stable diffusion1.5的预训练权重进行训练，需要在Huggingface库中进行下载。
