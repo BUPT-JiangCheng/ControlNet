@@ -1,0 +1,4 @@
+--2025-11-19 09:23:02--  https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/diffusers/controlnet_training/conditioning_image_2.png
+Resolving huggingface.co (huggingface.co)... 104.23.125.189, 2a03:2880:f129:83:face:b00c:0:25de
+Connecting to huggingface.co (huggingface.co)|104.23.125.189|:443... failed: Connection timed out.
+Connecting to huggingface.co (huggingface.co)|2a03:2880:f129:83:face:b00c:0:25de|:443... failed: Network is unreachable.
