@@ -1,0 +1,1 @@
+默认使用本地的fill50k的数据集进行测试（在脚本中调用fill50k.py），若要使用在线下载的数据集，需修改train_controlnet.py文件
